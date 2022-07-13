@@ -6,4 +6,10 @@ def create_app(test_config=None):
   app.config.from_mapping(
     SECRET_KEY='super_secret_key'
   )
+
+  @app.route('/hello')
+  def hello():
+    return 'Hello world, Welcome to the Python NewsFeed. More coming soon...'
+
+
   return app
